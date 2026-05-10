@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
 import { Icon } from '@iconify/react'
 
-const inputClass = "w-full px-4 py-3.5 rounded-xl bg-white border-2 border-black text-black font-satoshi text-[15px] font-medium transition-all duration-200 focus:outline-none focus:translate-x-[-2px] focus:translate-y-[-2px] focus:shadow-[4px_4px_0px_0px_#000000]"
+const inputClass = "w-full max-w-full min-w-0 appearance-none px-4 py-3.5 rounded-xl bg-white border-2 border-black text-black font-satoshi text-[15px] font-medium transition-all duration-200 focus:outline-none focus:translate-x-[-2px] focus:translate-y-[-2px] focus:shadow-[4px_4px_0px_0px_#000000]"
 const labelClass = "block mb-2 text-xs font-extrabold tracking-widest uppercase text-black font-cabinet"
 const cardClass = "bg-white rounded-2xl p-6 border-2 border-black shadow-[4px_4px_0px_0px_#000000] mb-4"
 const rowClass = "flex flex-col md:flex-row gap-4 mb-4"
 
 function Field({ label, children }) {
   return (
-    <div className="mb-4 w-full">
+    <div className="mb-4 w-full flex-1 min-w-0">
       <label className={labelClass}>{label}</label>
       {children}
     </div>
