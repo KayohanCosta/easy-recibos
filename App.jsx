@@ -330,8 +330,8 @@ export default function App() {
             <a href="https://github.com/KayohanCosta" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Icon icon="mdi:github" width="28" height="28" />
             </a>
-            <a href="tel:+5585998213158" className="text-gray-400 hover:text-white transition-colors">
-              <Icon icon="ic:baseline-phone" width="28" height="28" />
+            <a href="https://wa.me/5585998213158" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#25D366] transition-colors">
+              <Icon icon="mdi:whatsapp" width="28" height="28" />
             </a>
           </div>
         </div>
