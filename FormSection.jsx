@@ -208,22 +208,7 @@ function DocumentoTab({ receipt, setReceipt }) {
             type="date"
             value={receipt.date}
             onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
-            style={{
-              display: 'block',
-              width: '100%',
-              maxWidth: '100%',
-              minWidth: '100%',
-              boxSizing: 'border-box',
-              padding: '14px 16px',
-              borderRadius: '12px',
-              border: '2px solid #000',
-              background: '#fff',
-              fontSize: '15px',
-              fontFamily: 'inherit',
-              appearance: 'none',
-              WebkitAppearance: 'none',
-              outline: 'none',
-            }}
+            className={inputClass}
           />
         </Field>
       </div>
@@ -233,22 +218,7 @@ function DocumentoTab({ receipt, setReceipt }) {
             type="date"
             value={receipt.dueDate}
             onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
-            style={{
-              display: 'block',
-              width: '100%',
-              maxWidth: '100%',
-              minWidth: '100%',
-              boxSizing: 'border-box',
-              padding: '14px 16px',
-              borderRadius: '12px',
-              border: '2px solid #000',
-              background: '#fff',
-              fontSize: '15px',
-              fontFamily: 'inherit',
-              appearance: 'none',
-              WebkitAppearance: 'none',
-              outline: 'none',
-            }}
+            className={inputClass}
           />
         </Field>
       </div>

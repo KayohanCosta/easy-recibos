@@ -73,9 +73,14 @@ input[type="number"] {
   appearance: textfield !important;
 }
 
-/* Fix iOS Safari Date Input rendering bug */
-@supports (-webkit-touch-callout: none) {
-  input[type="date"] {
-    width: -webkit-fill-available !important;
-  }
+/* Date input consistency across all browsers */
+input[type="date"] {
+  width: 100% !important;
+  min-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
 }
