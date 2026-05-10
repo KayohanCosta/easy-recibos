@@ -265,7 +265,7 @@ function DocumentoTab({ receipt, setReceipt }) {
 // ---- ITENS TAB ----
 function ItensTab({ items, setItems, subtotal, receipt }) {
   const addItem = () => {
-    setItems(prev => [...prev, { id: Date.now(), description: '', quantity: 1, unit: 'un', unitPrice: 0 }])
+    setItems(prev => [...prev, { id: Date.now(), description: '', quantity: '1', unit: 'un', unitPrice: '' }])
   }
 
   const removeItem = (id) => {
@@ -310,8 +310,8 @@ function ItensTab({ items, setItems, subtotal, receipt }) {
                   type="number"
                   min="0"
                   step="0.01"
-                  value={item.quantity}
-                  onChange={e => updateItem(item.id, 'quantity', parseFloat(e.target.value) || 0)}
+                  value={item.quantity === 0 ? '' : item.quantity}
+                  onChange={e => updateItem(item.id, 'quantity', e.target.value)}
                   className={inputClass}
                 />
               </Field>
@@ -340,15 +340,15 @@ function ItensTab({ items, setItems, subtotal, receipt }) {
                   type="number"
                   min="0"
                   step="0.01"
-                  value={item.unitPrice}
-                  onChange={e => updateItem(item.id, 'unitPrice', parseFloat(e.target.value) || 0)}
+                  value={item.unitPrice === 0 ? '' : item.unitPrice}
+                  onChange={e => updateItem(item.id, 'unitPrice', e.target.value)}
                   className={inputClass}
                 />
               </Field>
             </div>
           </div>
           <div className="text-right text-[15px] font-extrabold font-cabinet text-black pt-2">
-            Subtotal: {currencySymbol} {(item.quantity * item.unitPrice).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+            Subtotal: {currencySymbol} {((parseFloat(item.quantity) || 0) * (parseFloat(item.unitPrice) || 0)).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
           </div>
         </div>
       ))}

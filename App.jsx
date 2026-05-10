@@ -35,7 +35,7 @@ const defaultReceipt = {
 }
 
 const defaultItems = [
-  { id: 1, description: '', quantity: 1, unit: 'un', unitPrice: 0 }
+  { id: 1, description: '', quantity: '1', unit: 'un', unitPrice: '' }
 ]
 
 export default function App() {
@@ -68,7 +68,7 @@ export default function App() {
     { id: 'itens', label: 'Itens' },
   ]
 
-  const subtotal = items.reduce((acc, item) => acc + (item.quantity * item.unitPrice), 0)
+  const subtotal = items.reduce((acc, item) => acc + ((parseFloat(item.quantity) || 0) * (parseFloat(item.unitPrice) || 0)), 0)
 
   const handleDownloadPDF = async () => {
     setIsGenerating(true)

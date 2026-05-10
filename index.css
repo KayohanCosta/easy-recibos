@@ -60,3 +60,15 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 4px 4px 0px 0px #000000 !important;
   transform: translate(-2px, -2px);
 }
+
+/* Remove spinner from number inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}
