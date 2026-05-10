@@ -204,22 +204,22 @@ function DocumentoTab({ receipt, setReceipt }) {
       </div>
       <div className={rowClass}>
         <Field label={dateLabel}>
-          <div className={`${inputClass} !p-0 overflow-hidden flex items-center`}>
+          <div className={`${inputClass} !p-0 flex items-center`}>
             <input
               type="date"
               value={receipt.date}
               onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
-              className="w-full h-full px-4 py-3.5 bg-transparent border-none outline-none appearance-none"
+              style={{ width: '100%', padding: '14px 16px', background: 'transparent', border: 'none', outline: 'none', appearance: 'none', WebkitAppearance: 'none', boxSizing: 'border-box' }}
             />
           </div>
         </Field>
         <Field label={dueDateLabel}>
-          <div className={`${inputClass} !p-0 overflow-hidden flex items-center`}>
+          <div className={`${inputClass} !p-0 flex items-center`}>
             <input
               type="date"
               value={receipt.dueDate}
               onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
-              className="w-full h-full px-4 py-3.5 bg-transparent border-none outline-none appearance-none"
+              style={{ width: '100%', padding: '14px 16px', background: 'transparent', border: 'none', outline: 'none', appearance: 'none', WebkitAppearance: 'none', boxSizing: 'border-box' }}
             />
           </div>
         </Field>
