@@ -322,7 +322,7 @@ export default function App() {
         <p className="font-satoshi font-medium text-gray-400 text-sm mb-12">© 2026 Easy Recibos. Todos os direitos reservados.</p>
         
         <div className="flex flex-col items-center gap-4 pt-8 border-t border-gray-800 w-full max-w-[300px]">
-          <div className="font-cabinet font-bold text-gray-300">Desenvolvido por KayohanCostaDev!</div>
+          <div className="font-cabinet font-bold text-gray-300">Desenvolvido por KayohanCostaDev</div>
           <div className="flex gap-6 mt-2">
             <a href="https://linkedin.com/in/kayohancostadev" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Icon icon="mdi:linkedin" width="28" height="28" />
