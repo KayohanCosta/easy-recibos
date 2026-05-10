@@ -204,24 +204,22 @@ function DocumentoTab({ receipt, setReceipt }) {
       </div>
       <div className={rowClass}>
         <Field label={dateLabel}>
-          <div className={`${inputClass} !p-0 flex items-center`}>
-            <input
-              type="date"
-              value={receipt.date}
-              onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
-              style={{ width: '100%', padding: '14px 16px', background: 'transparent', border: 'none', outline: 'none', appearance: 'none', WebkitAppearance: 'none', boxSizing: 'border-box' }}
-            />
-          </div>
+          <input
+            type="date"
+            value={receipt.date}
+            onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
+            className={inputClass}
+            style={{ display: 'block', width: '100%', boxSizing: 'border-box', minWidth: 0 }}
+          />
         </Field>
         <Field label={dueDateLabel}>
-          <div className={`${inputClass} !p-0 flex items-center`}>
-            <input
-              type="date"
-              value={receipt.dueDate}
-              onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
-              style={{ width: '100%', padding: '14px 16px', background: 'transparent', border: 'none', outline: 'none', appearance: 'none', WebkitAppearance: 'none', boxSizing: 'border-box' }}
-            />
-          </div>
+          <input
+            type="date"
+            value={receipt.dueDate}
+            onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
+            className={inputClass}
+            style={{ display: 'block', width: '100%', boxSizing: 'border-box', minWidth: 0 }}
+          />
         </Field>
       </div>
       <div className={rowClass}>
