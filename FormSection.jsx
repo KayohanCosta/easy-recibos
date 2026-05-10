@@ -214,12 +214,29 @@ function DocumentoTab({ receipt, setReceipt }) {
       </div>
       <div className="w-full mb-4">
         <Field label={dueDateLabel}>
-          <input
-            type="date"
-            value={receipt.dueDate}
-            onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
-            className={inputClass}
-          />
+          {/* Wrapper garante tamanho fixo mesmo sem valor */}
+          <div className={inputClass} style={{ padding: 0, position: 'relative', cursor: 'text' }}>
+            <input
+              type="date"
+              value={receipt.dueDate}
+              onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
+              style={{
+                display: 'block',
+                width: '100%',
+                height: '100%',
+                padding: '14px 16px',
+                background: 'transparent',
+                border: 'none',
+                outline: 'none',
+                appearance: 'none',
+                WebkitAppearance: 'none',
+                fontSize: '15px',
+                fontFamily: 'inherit',
+                color: 'inherit',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
         </Field>
       </div>
       <div className={rowClass}>

@@ -28,7 +28,7 @@ const defaultReceipt = {
   number: `REC-${Date.now().toString().slice(-6)}`,
   type: 'recibo',
   date: new Date().toISOString().split('T')[0],
-  dueDate: new Date().toISOString().split('T')[0],
+  dueDate: '',
   paymentMethod: 'pix',
   notes: '',
   currency: 'BRL',
