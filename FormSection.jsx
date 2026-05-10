@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 const inputClass = "block w-full max-w-full min-w-0 box-border appearance-none px-4 py-3.5 rounded-xl bg-white border-2 border-black text-black font-satoshi text-[15px] font-medium transition-all duration-200 outline-none focus:translate-x-[-2px] focus:translate-y-[-2px] focus:shadow-[4px_4px_0px_0px_#000000] focus-within:translate-x-[-2px] focus-within:translate-y-[-2px] focus-within:shadow-[4px_4px_0px_0px_#000000]"
 const labelClass = "block mb-2 text-xs font-extrabold tracking-widest uppercase text-black font-cabinet"
 const cardClass = "bg-white rounded-2xl p-6 border-2 border-black shadow-[4px_4px_0px_0px_#000000] mb-4"
-const rowClass = "flex flex-col md:flex-row gap-4 mb-4"
+const rowClass = "w-full flex flex-col md:flex-row gap-4 mb-4"
 
 function Field({ label, children }) {
   return (
@@ -202,23 +202,23 @@ function DocumentoTab({ receipt, setReceipt }) {
           <Input value={receipt.number} onChange={v => setReceipt(r => ({ ...r, number: v }))} placeholder="001" />
         </Field>
       </div>
-      <div className={rowClass}>
+      <div className="w-full mb-4">
         <Field label={dateLabel}>
           <input
             type="date"
             value={receipt.date}
             onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
             className={inputClass}
-            style={{ display: 'block', width: '100%', boxSizing: 'border-box', minWidth: 0 }}
           />
         </Field>
+      </div>
+      <div className="w-full mb-4">
         <Field label={dueDateLabel}>
           <input
             type="date"
             value={receipt.dueDate}
             onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
             className={inputClass}
-            style={{ display: 'block', width: '100%', boxSizing: 'border-box', minWidth: 0 }}
           />
         </Field>
       </div>
