@@ -1,0 +1,62 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900,400,500,700&f[]=satoshi@900,700,500,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-satoshi bg-[#FAFAFA] text-[#000000] antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cabinet tracking-tight;
+  }
+}
+
+@layer utilities {
+  .brutal-border {
+    border: 2px solid #000000;
+  }
+  .brutal-shadow {
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+  .brutal-shadow-lg {
+    box-shadow: 8px 8px 0px 0px #000000;
+  }
+  .brutal-btn {
+    @apply brutal-border brutal-shadow transition-all duration-200 cursor-pointer;
+  }
+  .brutal-btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px #000000;
+  }
+  .bg-dots {
+    background-image: radial-gradient(circle, #000000 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    background-color: #ffe17c;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(-2deg); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #171e19; border-left: 2px solid #000000; }
+::-webkit-scrollbar-thumb { background: #ffe17c; border: 2px solid #000000; border-radius: 0; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Focus states for forms */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #000000 !important;
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+  transform: translate(-2px, -2px);
+}
