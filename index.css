@@ -72,3 +72,10 @@ input[type="number"] {
   -moz-appearance: textfield !important;
   appearance: textfield !important;
 }
+
+/* Fix iOS Safari Date Input rendering bug */
+@supports (-webkit-touch-callout: none) {
+  input[type="date"] {
+    width: -webkit-fill-available !important;
+  }
+}
