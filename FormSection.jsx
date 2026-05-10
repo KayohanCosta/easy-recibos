@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Icon } from '@iconify/react'
 
-const inputClass = "block w-full max-w-full min-w-0 box-border appearance-none px-4 py-3.5 rounded-xl bg-white border-2 border-black text-black font-satoshi text-[15px] font-medium transition-all duration-200 outline-none focus:translate-x-[-2px] focus:translate-y-[-2px] focus:shadow-[4px_4px_0px_0px_#000000] focus-within:translate-x-[-2px] focus-within:translate-y-[-2px] focus-within:shadow-[4px_4px_0px_0px_#000000]"
+const inputClass = "block w-full max-w-full min-w-0 box-border appearance-none px-4 py-3.5 rounded-xl bg-white border-2 border-black text-black font-satoshi text-[15px] font-medium transition-all duration-200 outline-none focus:translate-x-[-2px] focus:translate-y-[-2px] focus:shadow-[4px_4px_0px_0px_#000000]"
 const labelClass = "block mb-2 text-xs font-extrabold tracking-widest uppercase text-black font-cabinet"
 const cardClass = "bg-white rounded-2xl p-6 border-2 border-black shadow-[4px_4px_0px_0px_#000000] mb-4"
 const rowClass = "w-full flex flex-col md:flex-row gap-4 mb-4"
@@ -208,7 +208,22 @@ function DocumentoTab({ receipt, setReceipt }) {
             type="date"
             value={receipt.date}
             onChange={e => setReceipt(r => ({ ...r, date: e.target.value }))}
-            className={inputClass}
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: '100%',
+              minWidth: '100%',
+              boxSizing: 'border-box',
+              padding: '14px 16px',
+              borderRadius: '12px',
+              border: '2px solid #000',
+              background: '#fff',
+              fontSize: '15px',
+              fontFamily: 'inherit',
+              appearance: 'none',
+              WebkitAppearance: 'none',
+              outline: 'none',
+            }}
           />
         </Field>
       </div>
@@ -218,7 +233,22 @@ function DocumentoTab({ receipt, setReceipt }) {
             type="date"
             value={receipt.dueDate}
             onChange={e => setReceipt(r => ({ ...r, dueDate: e.target.value }))}
-            className={inputClass}
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: '100%',
+              minWidth: '100%',
+              boxSizing: 'border-box',
+              padding: '14px 16px',
+              borderRadius: '12px',
+              border: '2px solid #000',
+              background: '#fff',
+              fontSize: '15px',
+              fontFamily: 'inherit',
+              appearance: 'none',
+              WebkitAppearance: 'none',
+              outline: 'none',
+            }}
           />
         </Field>
       </div>
