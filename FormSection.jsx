@@ -214,8 +214,7 @@ function DocumentoTab({ receipt, setReceipt }) {
       </div>
       <div className="w-full mb-4">
         <Field label={dueDateLabel}>
-          {/* Wrapper garante tamanho fixo mesmo sem valor */}
-          <div className={inputClass} style={{ padding: 0, position: 'relative', cursor: 'text' }}>
+          <div className={inputClass} style={{ padding: 0, minHeight: '52px', cursor: 'text' }}>
             <input
               type="date"
               value={receipt.dueDate}
@@ -223,7 +222,7 @@ function DocumentoTab({ receipt, setReceipt }) {
               style={{
                 display: 'block',
                 width: '100%',
-                height: '100%',
+                minHeight: '52px',
                 padding: '14px 16px',
                 background: 'transparent',
                 border: 'none',
